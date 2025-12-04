@@ -73,7 +73,7 @@ nav a.active {
   justify-content: space-between;
   align-items: center;
   /* padding-left: 8.75rem; */
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .homeText {
@@ -89,10 +89,10 @@ nav a.active {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 3rem;
   margin-left: 3rem;
   margin-right: 12rem;       
   border: 6px solid var(--primary-color);
-
 }
 
 a svg {
@@ -126,7 +126,7 @@ a {
 .icons {
   display: flex;
   gap: 24px;    
-  padding-top: 1rem;          
+  padding-top: 2rem;          
 }
 
 
