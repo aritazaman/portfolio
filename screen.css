@@ -1,0 +1,160 @@
+:root {
+  --base-color: #E5D7C4;         
+  --base-variant: #CFBB99;      
+  --text-color: #4C3D19;         
+  --secondary-text: #364024;     
+  --primary-color: #889063;      
+}
+
+.darkmode {
+  --base-color: #2A220F;        
+  --base-variant: #2F3A20;    
+  --text-color: #D0C4B3;       
+  --secondary-text: #B8A684;     
+  --primary-color: #66704E;     
+}
+
+body{
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+nav a {
+  position: relative;
+  padding-left: 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: var(--text-color);
+}
+
+nav a.active {
+  font-weight: 700;
+  text-decoration: underline 3px;
+  text-underline-offset: 4px;
+}
+
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8.25rem;
+}
+
+.logo{
+  height: 60px;
+  width: 60px;
+}
+
+.heyThere,
+.homeSubtext {
+  font-size: 1.3rem;
+}
+
+.name{
+  font-size: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-left: 8.75rem; */
+  margin-top: 2rem;
+}
+
+.homeText {
+  max-width: 600px;
+}
+
+.homeSubtext{
+  line-height: 1.6;
+}
+
+.headshot {
+  width: 320px;        
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 3rem;
+  margin-right: 10rem;       
+  border: 6px solid var(--primary-color);
+
+}
+
+a svg {
+  width: 60px;
+  height: 60px;
+  color: var(--secondary-text); 
+  transition: transform 0.2s;
+  text-decoration: none;
+
+}
+
+.linkedin{
+  margin-left: -9.5px;
+}
+
+a:hover svg {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none; 
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column; 
+  /* padding-left: 8.25rem;   */
+  align-items: flex-start;       
+}
+
+.icons {
+  display: flex;
+  gap: 24px;    
+  padding-top: 1rem;          
+}
+
+
+.resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  width: 161.5px;
+  background-color: var(--secondary-text);
+  color: var(--base-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.resume-button:hover {
+  transform: scale(1.05);
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
