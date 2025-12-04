@@ -25,7 +25,9 @@ nav{
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  width: 100%;
+  box-sizing:border-box;
 }
 
 nav a {
@@ -49,12 +51,12 @@ nav a.active {
 .pageWrapper {
   display: flex;
   flex-direction: column;
-  padding-left: 8.25rem;
+  padding-left: 9.50rem;
 }
 
 .logo{
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
 
 .heyThere,
@@ -83,12 +85,12 @@ nav a.active {
 }
 
 .headshot {
-  width: 320px;        
-  height: 320px;
+  width: 350px;        
+  height: 350px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 3rem;
-  margin-right: 10rem;       
+  margin-right: 12rem;       
   border: 6px solid var(--primary-color);
 
 }
@@ -156,5 +158,48 @@ a {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;          
+  outline: none;       
+  box-shadow: none;     
+  margin-left: auto;  
+}
+
+#theme-switch svg{
+    fill: var(--primary-color)
+  }
+
+#theme-switch svg:last-child{
+  display:none;
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+  display:block;
+}
+
+.logo.dark {
+  display: none;
+}
+
+.darkmode .logo.light {
+  display: none;   
+}
+
+.darkmode .logo.dark {
+  display: block; 
 }
 
