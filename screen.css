@@ -24,7 +24,7 @@ body{
 nav{
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem;
   font-size: 1.25rem;
   width: 100%;
@@ -33,9 +33,11 @@ nav{
 
 nav a {
   position: relative;
-  padding-left: 0.5rem;
+  /* padding-left: 0.5rem; */
   color: var(--text-color);
   text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  
 }
 
 nav a:visited {
@@ -44,9 +46,26 @@ nav a:visited {
 
 nav a.active {
   font-weight: 700;
-  text-decoration: underline 3px;
   text-underline-offset: 4px;
 }
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;      
+  width: 100%;
+  height: 2px;       
+  background: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
 
 
 .pageWrapper {
@@ -63,10 +82,12 @@ nav a.active {
 .heyThere,
 .homeSubtext {
   font-size: 1.3rem;
+  font-family: 'Karla', sans-serif;
 }
 
 .name{
   font-size: 4rem;
+  font-family: 'Chivo', sans-serif;
 }
 
 .wrapper {
@@ -143,6 +164,8 @@ a {
   text-decoration: none;
   border-radius: 6px;
   transition: transform 0.2s;
+  font-family: 'Karla', sans-serif;
+
 }
 
 .resume-button:hover {
@@ -220,9 +243,10 @@ a {
 }
 
 .exp-card h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1.4rem;
   font-weight: 600;
+  font-family: 'Chivo', sans-serif;
 }
 
 .exp-card ul {
@@ -232,24 +256,50 @@ a {
 }
 
 .exp-card li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
 }
 
 .exp-card li:last-child {
   border-bottom: none;
 }
 
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.3rem 0;
+  font-weight: 500;
+}
+
+.item-bullets {
+  margin: 0.4rem 0 0 1.5rem; 
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  list-style-position: outside;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.85;
+  font-family: 'Karla', sans-serif;
+}
+
+.item-bullets li {
+  margin-bottom: 0.3rem;
+}
+
+
 .item-text {
   font-weight: 500;
+  font-size: 1.2rem;
+  font-family: 'Karla', sans-serif;
+  padding-bottom: 1rem;;
+  color: var(--secondary-text)
 }
 
 .item-date {
   font-size: 0.95rem;
   opacity: 0.75;
+  font-family: 'Karla', sans-serif;
+  color: var(--secondary-text)
 }
 
 .exp-card:hover {
@@ -257,3 +307,91 @@ a {
   transition: 0.2s;
 }
 
+.projects-section {
+  padding: 3rem 2rem;
+}
+
+.projects-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family: 'Chivo', sans-serif;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: var(--base-variant);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s;
+  width: 450px; 
+  margin: 0 auto;   
+  font-family: 'Karla', sans-serif;
+
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  color: var(--secondary-text);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: var(--text-color);
+
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    max-width: 80%; 
+    margin: 0 auto; 
+  }
+  
+}
+
+.karla-regular {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.chivo-regular {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
