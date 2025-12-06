@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience</title>
+    <script>
+      if (localStorage.getItem('darkmode') === 'active') {
+        document.documentElement.classList.add('darkmode');
+      }
+    </script>
     <link rel="stylesheet" href="screen.css">
     <script type = "text/javascript" src = "darkmode.js" defer> </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +17,7 @@
 
 
   </head>
-  <body class="darkmode">
+  <body>
       <nav>
         <img class="logo light" src="lightLogo.png" alt="logo in light mode">
         <img class="logo dark" src="darkLogo.png" alt="logo in dark mode">
@@ -42,7 +47,6 @@
               <li>Serve as the primary liaison between the executive board and members, managing all official club communications.</li>
               <li>Maintain organized internal documentation, including meeting minutes, attendance records, and event archives.</li>
               <li>Track and analyze member attendance to support engagement initiatives and club reporting.</li>
-              <li>Ensure timely dissemination of event details, opportunities, and organizational updates to over 30 active members.</li>
             </ul>
           </li>
           <li>

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <script>
+      if (localStorage.getItem('darkmode') === 'active') {
+        document.documentElement.classList.add('darkmode');
+      }
+    </script>
     <link rel="stylesheet" href="screen.css">
     <script type = "text/javascript" src = "darkmode.js" defer> </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
   </head>
-  <body class="darkmode">
+  <body>
       <nav>
         <img class="logo light" src="lightLogo.png" alt="logo in light mode">
         <img class="logo dark" src="darkLogo.png" alt="logo in dark mode">
