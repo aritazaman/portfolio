@@ -33,7 +33,6 @@ nav{
 
 nav a {
   position: relative;
-  /* padding-left: 0.5rem; */
   color: var(--text-color);
   text-decoration: none;
   font-family: 'Karla', sans-serif;
@@ -65,6 +64,19 @@ nav a::after {
 nav a:hover::after {
   transform: scaleX(1);
 }
+
+@media (max-width: 700px) {
+  nav {
+    gap: 1rem;
+    padding: 1rem; 
+    justify-content: center; 
+  }
+
+  nav a {
+    font-size: 1rem; 
+  }
+}
+
 
 .pageWrapper {
   display: flex;
@@ -173,6 +185,71 @@ a {
   transform: scale(1.05);
 }
 
+@media (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;  
+    align-items: center;
+    margin-top: 1rem;  
+  }
+
+  .pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* horizontal centering */
+    justify-content: center;  /* vertical centering */
+    min-height: 100vh;        /* take full viewport height */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    margin: 2rem 0 0 0;
+    border-width: 4px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .heyThere,
+  .homeSubtext {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .icons {
+    justify-content: center;
+    gap: 16px;         
+    padding-top: 1.5rem;
+  }
+
+  a svg {
+    width: 50px;     
+    height: 50px;
+  }
+
+  .resume-button {
+    margin: 1.5rem 0;
+    width: auto;        
+  }
+
+  .contact-section {
+    align-items: center; 
+    text-align: center;
+    padding-left: 0;
+  }
+
+  #theme-switch {
+    margin: 1rem 0 0 0;  
+    margin-left: 0;     
+  }
+}
+
+
 .dm-serif-text-regular {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
@@ -188,6 +265,8 @@ a {
 #theme-switch{
   height: 50px;
   width: 50px;
+  min-width: 50px;     
+  min-height: 50px;     
   padding: 0;
   border-radius: 50%;
   background-color: var(--base-variant);
@@ -310,6 +389,15 @@ a {
   transition: 0.2s;
 }
 
+@media (max-width: 1100px) {
+  .experience-section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+}
+
+
 .projects-section {
   padding: 3rem 2rem;
 }
@@ -333,7 +421,7 @@ a {
   padding: 1.5rem;
   border-radius: 20px;
   background: var(--base-variant);
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
   transition: transform 0.2s;
   width: 450px; 
@@ -372,7 +460,7 @@ a {
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1100px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -440,7 +528,9 @@ textarea {
 }
 
 label {
-  margin-bottom: 0.5rem;
+  display: flex;           
+  flex-direction: column;  
+  gap: 0.5rem;           
   font-weight: 500;
   color: var(--text-color);
 }
@@ -473,4 +563,3 @@ button:hover {
   gap: 1.5rem;             
   margin-top: 1.5rem;     
 }
-
