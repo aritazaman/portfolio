@@ -195,9 +195,9 @@ a {
   .pageWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;     /* horizontal centering */
-    justify-content: center;  /* vertical centering */
-    min-height: 100vh;        /* take full viewport height */
+    align-items: center;     
+    justify-content: center;  
+    min-height: 100vh;      
     padding-left: 1rem;
     padding-right: 1rem;
   }
